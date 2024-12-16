@@ -1,0 +1,62 @@
+.features-container{
+  max-width: 1183px;
+  margin-block: 56px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 62px;
+  align-items: center;
+
+  .features-content {
+    max-width: 559px;
+    text-align: center;
+
+    h2 {
+      font-size: $sm-font-size;
+      color: $primary-font-color;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 20px;
+      color: $secondary-font-color;
+    }
+  }
+
+  .features__snapShots {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .features__card {
+      max-width: 381px;
+      text-align: center;
+
+      .features__snapShots-image {
+        max-width: 381px;
+        height: 480px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        img {
+          width: 100%;
+          object-fit: cover;
+          cursor: pointer;
+          transition: all .3s ease-in;
+          border-radius: 10px;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      p {
+        font-size: 24px;
+        font-weight: 600;
+        color: $primary-font-color;
+      }
+    }
+  }
+}
