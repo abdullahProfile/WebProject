@@ -278,6 +278,7 @@ header .fas {
   display: flex;
   gap: 32px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .cards-content .cards-section__cards .card {
   max-width: 285px;
@@ -358,4 +359,34 @@ header .fas {
 .footer-content .footer-nav a {
   text-decoration: none;
   color: #000;
+}
+
+.shop-content {
+  max-width: 1440px;
+  margin-inline: auto;
+  position: relative;
+  overflow: hidden;
+}
+.shop-content .shop-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.shop-content .shop-text h4 {
+  font-size: 48px;
+  font-weight: 500;
+}
+.shop-content .shop-text .shop-cta {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.shop-content .shop-text .shop-cta a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
 }
