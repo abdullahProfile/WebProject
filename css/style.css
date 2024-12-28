@@ -384,9 +384,13 @@ header .fas {
   display: flex;
   align-items: center;
   gap: 5px;
+  justify-content: center;
 }
 .shop-content .shop-text .shop-cta a {
   text-decoration: none;
   color: #000;
   font-weight: 500;
+}
+.shop-content .shop-text .shop-cta .icon-cta {
+  font-size: 0;
 }
