@@ -260,6 +260,7 @@ header .fas {
   flex-direction: column;
   gap: 32px;
   align-items: center;
+  justify-content: center;
 }
 .cards-content h3 {
   font-size: 40px;
@@ -329,4 +330,32 @@ header .fas {
   color: #898989;
   text-decoration: line-through;
   font-weight: normal;
+}
+
+.footer-content {
+  max-width: 1240px;
+  margin-block: 28px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 2px solid #9F9F9F;
+  border-bottom: 2px solid #9F9F9F;
+  padding-block: 50px;
+  flex-wrap: wrap;
+}
+.footer-content .footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.footer-content .footer-nav h3 {
+  font-weight: bold;
+  font-size: 24px;
+}
+.footer-content .footer-nav p {
+  color: #9F9F9F;
+}
+.footer-content .footer-nav a {
+  text-decoration: none;
+  color: #000;
 }
