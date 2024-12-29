@@ -1,30 +1,29 @@
 const cart = document.getElementById('cart');
-const cartIconMobile = document.getElementById('cartIcon-mobile');  // Mobile cart icon
-const cartIconDesktop = document.getElementById('cartIcon-desktop');  // Desktop cart icon
+const cartIconMobile = document.getElementById('cartIcon-mobile');
+const cartIconDesktop = document.getElementById('cartIcon-desktop');
 const closeCart = document.getElementById('closeCart');
 const confirmOrder = document.getElementById('confirmOrder');
 const cartItems = document.getElementById('cartItems');
 const totalBill = document.getElementById('totalBill');
 
-let total = 0; // Initialize total amount
+let total = 0;
 
-// Open cart when either the mobile or desktop cart icon is clicked
+
 cartIconMobile.addEventListener('click', (e) => {
-  e.preventDefault(); // Prevent default action for anchor link
+  e.preventDefault();
   cart.classList.add('show');
 });
 
 cartIconDesktop.addEventListener('click', (e) => {
-  e.preventDefault(); // Prevent default action for anchor link
+  e.preventDefault();
   cart.classList.add('show');
 });
 
-// Close cart when close button is clicked
 closeCart.addEventListener('click', () => {
   cart.classList.remove('show');
 });
 
-// Function to add items to the cart
+
 function addToCart(itemName, itemPrice) {
   const listItem = document.createElement('li');
   listItem.innerHTML = `
@@ -35,22 +34,22 @@ function addToCart(itemName, itemPrice) {
   cartItems.appendChild(listItem);
 
   total += itemPrice;
-  totalBill.textContent = total.toLocaleString(); // Update total amount
+  totalBill.textContent = total.toLocaleString();
 }
 
-// Function to remove items from the cart
+
 function removeItem(button, itemPrice) {
   button.parentElement.remove();
   total -= itemPrice;
-  totalBill.textContent = total.toLocaleString(); // Update total amount
+  totalBill.textContent = total.toLocaleString();
 }
 
-// Confirm Order
+
 confirmOrder.addEventListener('click', () => {
   if (total > 0) {
     alert("Order successfully placed!");
-    cartItems.innerHTML = ''; // Clear cart items
-    total = 0; // Reset total
+    cartItems.innerHTML = '';
+    total = 0;
     totalBill.textContent = '0';
   } else {
     alert("Your cart is empty. Add items to place an order.");
