@@ -273,6 +273,11 @@ header .fas {
   font-weight: 600;
   padding: 12px 74px;
   border: 1px solid currentColor;
+  transition: all 0.3s ease-in;
+}
+.cards-content .card-cta:hover {
+  background-color: #B88E2F;
+  color: #ccc;
 }
 .cards-content .cards-section__cards {
   display: flex;
@@ -488,6 +493,9 @@ header .fas {
 .footer-content .footer-nav a {
   text-decoration: none;
   color: #000;
+}
+.footer-content .footer-nav a:hover {
+  color: #B88E2F;
 }
 
 .shop-content {

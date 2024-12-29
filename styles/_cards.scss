@@ -19,6 +19,12 @@
     font-weight: 600;
     padding: 12px 74px;
     border: 1px solid currentColor;
+    transition: all .3s ease-in;
+
+    &:hover{
+      background-color: #B88E2F;
+      color: #ccc;
+    }
   }
   .cards-section__cards {
     display: flex;
