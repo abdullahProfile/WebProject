@@ -21,7 +21,7 @@
         <a href="#"><img src="../assets/icons/iconOne.svg" alt="icon"></a>
         <a href="#"><img src="../assets/icons/iconTwo.svg" alt="icon"></a>
         <a href="#"><img src="../assets/icons/iconThree.svg" alt="icon"></a>
-        <a href="#"><img src="../assets/icons/iconFour.svg" alt="icon"></a>
+        <a href="#" id="cartIcon-mobile"><img src="../assets/icons/iconFour.svg" alt="icon"></a>
       </div>
 
       <button class="fas fa-times close-menu" onclick="closeMenu()"></button>
@@ -32,7 +32,7 @@
       <a href="#"><img src="../assets/icons/iconOne.svg" alt="icon"></a>
       <a href="#"><img src="../assets/icons/iconTwo.svg" alt="icon"></a>
       <a href="#"><img src="../assets/icons/iconThree.svg" alt="icon"></a>
-      <a href="#"><img src="../assets/icons/iconFour.svg" alt="icon"></a>
+      <a href="#" id="cartIcon-desktop"><img src="../assets/icons/iconFour.svg" alt="icon"></a>
     </div>
 
     <button class="fas fa-bars open-menu" onclick="openMenu()"></button>
@@ -56,11 +56,10 @@
 
   <section class="cards-section">
     <div class="cards-content">
-
-      <h3>Our Products</h3>
       <div class="cards-section__cards">
         <div class="card">
           <div class="discount">-30%</div>
+          <button class="card_btn" onclick="addToCart('Syltherine', 2500000)">Add to cart</button>
           <div class="card-image">
             <a href="#"><img src="../assets/cards/cardOne.svg" alt="image"></a>
           </div>
@@ -80,6 +79,7 @@
           <div class="discount">
             -30%
           </div>
+          <button class="card_btn" onclick="addToCart('Syltherine', 2500000)">Add to cart</button>
           <div class="card-image">
             <a href="#"><img src="../assets/cards/cardTwo.svg" alt="image"></a>
           </div>
@@ -95,6 +95,7 @@
 
         <div class="card">
           <div class="discount">-30%</div>
+          <button class="card_btn" onclick="addToCart('Lolito', 14000000)">Add to cart</button>
           <div class="card-image">
             <a href="#"><img src="../assets/cards/cardThree.svg" alt="image"></a>
           </div>
@@ -111,6 +112,7 @@
 
         <div class="card">
           <div class="discount new-item">New</div>
+          <button class="card_btn" onclick="addToCart('Respira', 500000)">Add to cart</button>
           <div class="card-image">
             <a href="#"><img src="../assets/cards/cardfour.svg" alt="image"></a>
           </div>
@@ -125,6 +127,7 @@
         </div>
 
         <div class="card">
+          <button class="card_btn" onclick="addToCart('Grifo', 1500000)">Add to cart</button>
           <div class="card-image">
             <a href="#"><img src="../assets/cards/cardFive.svg" alt="image"></a>
           </div>
@@ -141,6 +144,7 @@
 
         <div class="card">
           <div class="discount">-30%</div>
+          <button class="card_btn" onclick="addToCart('uggo', 1500000)">Add to cart</button>
           <div class="card-image">
             <a href="#"><img src="../assets/cards/cardSixth.svg" alt="image"></a>
           </div>
@@ -156,6 +160,7 @@
 
         <div class="card">
           <div class="discount new-item">New</div>
+          <button class="card_btn" onclick="addToCart('Pingky', 7000000)">Add to cart</button>
           <div class="card-image">
             <a href="#"><img src="../assets/cards/cardSeven.svg" alt="image"></a>
           </div>
@@ -172,6 +177,7 @@
 
         <div class="card">
           <div class="discount new-item">New</div>
+          <button class="card_btn" onclick="addToCart('Potty', 500000)">Add to cart</button>
           <div class="card-image">
             <a href="#"><img src="../assets/cards/cardEight.svg" alt="image"></a>
           </div>
@@ -187,6 +193,7 @@
 
         <div class="card">
           <div class="discount">-30%</div>
+          <button class="card_btn" onclick="addToCart('Syltherine', 2500000)">Add to cart</button>
           <div class="card-image">
             <a href="#"><img src="../assets/cards/cardOne.svg" alt="image"></a>
           </div>
@@ -202,40 +209,11 @@
         </div>
 
         <div class="card">
-          <div class="discount new-item">New</div>
-          <div class="card-image">
-            <a href="#"><img src="../assets/cards/cardEight.svg" alt="image"></a>
-          </div>
-
-          <div class="card-text">
-            <h3>Potty</h3>
-            <p>Minimalist flower pot</p>
-            <div class="card-text__price">
-              <p>Rp 500.000</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="discount">-30%</div>
-          <div class="card-image">
-            <a href="#"><img src="../assets/cards/cardSixth.svg" alt="image"></a>
-          </div>
-
-          <div class="card-text">
-            <h3>Muggo</h3>
-            <p>Small mug</p>
-            <div class="card-text__price">
-              <p>Rp 150.000</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
 
           <div class="discount">
             -30%
           </div>
+          <button class="card_btn" onclick="addToCart('Syltherine', 2500000)">Add to cart</button>
           <div class="card-image">
             <a href="#"><img src="../assets/cards/cardTwo.svg" alt="image"></a>
           </div>
@@ -251,6 +229,7 @@
 
         <div class="card">
           <div class="discount">-30%</div>
+          <button class="card_btn" onclick="addToCart('Lolito', 14000000)">Add to cart</button>
           <div class="card-image">
             <a href="#"><img src="../assets/cards/cardThree.svg" alt="image"></a>
           </div>
@@ -267,6 +246,7 @@
 
         <div class="card">
           <div class="discount new-item">New</div>
+          <button class="card_btn" onclick="addToCart('Respira', 500000)">Add to cart</button>
           <div class="card-image">
             <a href="#"><img src="../assets/cards/cardfour.svg" alt="image"></a>
           </div>
@@ -281,7 +261,24 @@
         </div>
 
         <div class="card">
+          <button class="card_btn" onclick="addToCart('Grifo', 1500000)">Add to cart</button>
+          <div class="card-image">
+            <a href="#"><img src="../assets/cards/cardFive.svg" alt="image"></a>
+          </div>
+
+          <div class="card-text">
+            <h3>Grifo</h3>
+            <p>Night lamp</p>
+            <div class="card-text__price">
+              <p>Rp 1.500.000</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card">
           <div class="discount">-30%</div>
+          <button class="card_btn" onclick="addToCart('uggo', 1500000)">Add to cart</button>
           <div class="card-image">
             <a href="#"><img src="../assets/cards/cardSixth.svg" alt="image"></a>
           </div>
@@ -297,6 +294,7 @@
 
         <div class="card">
           <div class="discount new-item">New</div>
+          <button class="card_btn" onclick="addToCart('Pingky', 7000000)">Add to cart</button>
           <div class="card-image">
             <a href="#"><img src="../assets/cards/cardSeven.svg" alt="image"></a>
           </div>
@@ -310,9 +308,31 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <a href="#" class="card-cta">Learn More</a>
+        <div class="card">
+          <div class="discount new-item">New</div>
+          <button class="card_btn" onclick="addToCart('Potty', 500000)">Add to cart</button>
+          <div class="card-image">
+            <a href="#"><img src="../assets/cards/cardEight.svg" alt="image"></a>
+          </div>
+
+          <div class="card-text">
+            <h3>Potty</h3>
+            <p>Minimalist flower pot</p>
+            <div class="card-text__price">
+              <p>Rp 500.000</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="cart">
+          <button id="closeCart">&times;</button>
+          <h3>Cart Summary</h3>
+          <ul id="cartItems"></ul>
+          <p>Total: Rp <span id="totalBill">0</span></p>
+          <button id="confirmOrder" class="btn-confirm">Confirm Order</button>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -341,5 +361,6 @@
     </div>
   </footer>
   <script src="../script.js"></script>
+  <script src="../cart.js"></script>
 </body>
 </html>

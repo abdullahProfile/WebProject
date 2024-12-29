@@ -1,5 +1,6 @@
 const cart = document.getElementById('cart');
-const cartIcon = document.getElementById('cartIcon');
+const cartIconMobile = document.getElementById('cartIcon-mobile');  // Mobile cart icon
+const cartIconDesktop = document.getElementById('cartIcon-desktop');  // Desktop cart icon
 const closeCart = document.getElementById('closeCart');
 const confirmOrder = document.getElementById('confirmOrder');
 const cartItems = document.getElementById('cartItems');
@@ -7,14 +8,20 @@ const totalBill = document.getElementById('totalBill');
 
 let total = 0; // Initialize total amount
 
-// Open cart
-cartIcon.addEventListener('click', () => {
+// Open cart when either the mobile or desktop cart icon is clicked
+cartIconMobile.addEventListener('click', (e) => {
+  e.preventDefault(); // Prevent default action for anchor link
   cart.classList.add('show');
 });
 
-// Close cart
+cartIconDesktop.addEventListener('click', (e) => {
+  e.preventDefault(); // Prevent default action for anchor link
+  cart.classList.add('show');
+});
+
+// Close cart when close button is clicked
 closeCart.addEventListener('click', () => {
-  cart.classList.remove('show'); // Ensure 'show' class is toggled correctly
+  cart.classList.remove('show');
 });
 
 // Function to add items to the cart

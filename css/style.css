@@ -352,7 +352,7 @@ header .fas {
 
 #cart {
   position: fixed;
-  top: 20%;
+  top: 17%;
   right: -100%;
   width: 320px;
   background-color: #fff;
@@ -366,7 +366,7 @@ header .fas {
 }
 
 #cart.show {
-  right: 20px;
+  right: 38px;
 }
 
 #cart h3 {
@@ -437,7 +437,7 @@ header .fas {
 }
 
 .btn-confirm {
-  background-color: #5cb85c;
+  background-color: #B88E2F;
   border: none;
   border-radius: 4px;
   color: #fff;
@@ -450,7 +450,7 @@ header .fas {
 }
 
 .btn-confirm:hover {
-  background-color: #4cae4c;
+  background-color: #1a1c1a;
 }
 
 #cart button:focus {
