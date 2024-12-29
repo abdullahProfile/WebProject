@@ -21,7 +21,7 @@
         <a href="#"><img src="./assets/icons/iconOne.svg" alt="icon"></a>
         <a href="#"><img src="./assets/icons/iconTwo.svg" alt="icon"></a>
         <a href="#"><img src="./assets/icons/iconThree.svg" alt="icon"></a>
-        <a href="#"><img src="./assets/icons/iconFour.svg" alt="icon"></a>
+        <a href="#" id="cartSummary"><img src="./assets/icons/iconFour.svg" alt="icon"></a>
       </div>
 
       <button class="fas fa-times close-menu" onclick="closeMenu()"></button>
@@ -32,7 +32,7 @@
       <a href="#"><img src="./assets/icons/iconOne.svg" alt="icon"></a>
       <a href="#"><img src="./assets/icons/iconTwo.svg" alt="icon"></a>
       <a href="#"><img src="./assets/icons/iconThree.svg" alt="icon"></a>
-      <a href="#"><img src="./assets/icons/iconFour.svg" alt="icon"></a>
+      <a href="#" id="cartIcon"><img src="./assets/icons/iconFour.svg" alt="icon"></a>
     </div>
 
     <button class="fas fa-bars open-menu" onclick="openMenu()"></button>
@@ -91,6 +91,7 @@
       <div class="cards-section__cards">
         <div class="card">
           <div class="discount">-30%</div>
+          <button class="card_btn" onclick="addToCart('Syltherine', 2500000)">Add to cart</button>
           <div class="card-image">
             <a href="#"><img src="./assets/cards/cardOne.svg" alt="image"></a>
           </div>
@@ -110,6 +111,7 @@
           <div class="discount">
             -30%
           </div>
+          <button class="card_btn" onclick="addToCart('Syltherine', 2500000)">Add to cart</button>
           <div class="card-image">
             <a href="#"><img src="./assets/cards/cardTwo.svg" alt="image"></a>
           </div>
@@ -125,6 +127,7 @@
 
         <div class="card">
           <div class="discount">-30%</div>
+          <button class="card_btn" onclick="addToCart('Lolito', 14000000)">Add to cart</button>
           <div class="card-image">
             <a href="#"><img src="./assets/cards/cardThree.svg" alt="image"></a>
           </div>
@@ -141,6 +144,7 @@
 
         <div class="card">
           <div class="discount new-item">New</div>
+          <button class="card_btn" onclick="addToCart('Respira', 500000)">Add to cart</button>
           <div class="card-image">
             <a href="#"><img src="./assets/cards/cardfour.svg" alt="image"></a>
           </div>
@@ -155,6 +159,7 @@
         </div>
 
         <div class="card">
+          <button class="card_btn" onclick="addToCart('Grifo', 1500000)">Add to cart</button>
           <div class="card-image">
             <a href="#"><img src="./assets/cards/cardFive.svg" alt="image"></a>
           </div>
@@ -171,6 +176,7 @@
 
         <div class="card">
           <div class="discount">-30%</div>
+          <button class="card_btn" onclick="addToCart('uggo', 1500000)">Add to cart</button>
           <div class="card-image">
             <a href="#"><img src="./assets/cards/cardSixth.svg" alt="image"></a>
           </div>
@@ -186,6 +192,7 @@
 
         <div class="card">
           <div class="discount new-item">New</div>
+          <button class="card_btn" onclick="addToCart('Pingky', 7000000)">Add to cart</button>
           <div class="card-image">
             <a href="#"><img src="./assets/cards/cardSeven.svg" alt="image"></a>
           </div>
@@ -202,6 +209,7 @@
 
         <div class="card">
           <div class="discount new-item">New</div>
+          <button class="card_btn" onclick="addToCart('Potty', 500000)">Add to cart</button>
           <div class="card-image">
             <a href="#"><img src="./assets/cards/cardEight.svg" alt="image"></a>
           </div>
@@ -213,6 +221,14 @@
               <p>Rp 500.000</p>
             </div>
           </div>
+        </div>
+
+        <div id="cart">
+          <button id="closeCart">&times;</button>
+          <h3>Cart Summary</h3>
+          <ul id="cartItems"></ul>
+          <p>Total: Rp <span id="totalBill">0</span></p>
+          <button id="confirmOrder" class="btn-confirm">Confirm Order</button>
         </div>
       </div>
 
@@ -245,5 +261,6 @@
     </div>
   </footer>
   <script src="./script.js"></script>
+  <script src="./cart.js"></script>
 </body>
 </html>
