@@ -394,3 +394,48 @@ header .fas {
 .shop-content .shop-text .shop-cta .icon-cta {
   font-size: 0;
 }
+
+.contact-content {
+  max-width: 1058px;
+  margin-block: 80px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-inline: 15px;
+  justify-content: center;
+}
+.contact-content .contact-content__text {
+  max-width: 644px;
+  text-align: center;
+  margin-inline: auto;
+}
+.contact-content .contact-content__text h4 {
+  font-size: 36px;
+  font-weight: 600;
+}
+.contact-content .contact-content__text p {
+  color: #9F9F9F;
+}
+.contact-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-content form input, .contact-content form textarea {
+  padding: 30px 15px;
+  border: 1px solid currentColor;
+  color: #9F9F9F;
+  border-radius: 5px;
+}
+.contact-content form button {
+  padding: 13px 88px;
+  background-color: #B88E2F;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+.contact-content form button:hover {
+  background-color: black;
+}
