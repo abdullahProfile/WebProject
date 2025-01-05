@@ -1,0 +1,40 @@
+.about-content {
+  max-width: 1440px;
+  margin-block: 50px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-inline: 15px;
+
+  .about-detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .about-img {
+      max-width: 600px;
+      object-fit: cover;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .about-txt {
+    max-width: 700px;
+    text-align: center;
+    h4 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 15px;
+      color: #9F9F9F;
+    }
+  }
+}

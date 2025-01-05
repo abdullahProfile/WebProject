@@ -27,8 +27,8 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
+  background-color: #FFF3E3;
+  color: #000;
   border: none;
   font-size: 2rem;
   cursor: pointer;
@@ -38,7 +38,7 @@
 }
 
 .slider-button:hover {
-  background: rgba(0, 0, 0, 0.8);
+  background: #fff;
 }
 
 .prev {

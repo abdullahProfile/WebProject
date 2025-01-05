@@ -116,3 +116,9 @@ header {
     justify-content: center;
   }
 }
+
+@media (max-width:768px) {
+  .header-navbar {
+    width: 60%;
+  }
+}

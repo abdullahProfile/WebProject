@@ -112,6 +112,11 @@ header .fas {
     justify-content: center;
   }
 }
+@media (max-width: 768px) {
+  .header-navbar {
+    width: 60%;
+  }
+}
 .slider {
   position: relative;
   width: 1440px;
@@ -141,8 +146,8 @@ header .fas {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
+  background-color: #FFF3E3;
+  color: #000;
   border: none;
   font-size: 2rem;
   cursor: pointer;
@@ -152,7 +157,7 @@ header .fas {
 }
 
 .slider-button:hover {
-  background: rgba(0, 0, 0, 0.8);
+  background: #fff;
 }
 
 .prev {
@@ -567,6 +572,41 @@ header .fas {
   box-shadow: 0 0 10px rgba(218, 218, 218, 0.5);
 }
 
+.product-feature__content {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-block: 105px 56px;
+  background-color: #FAF3EA;
+  display: flex;
+  gap: 55px;
+  justify-content: space-evenly;
+  justify-content: center;
+}
+.product-feature__content .product-features {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
+.product-feature__content .product-features .product-features__txt h5 {
+  color: #242424;
+  font-size: 25px;
+  margin-bottom: 2px;
+}
+.product-feature__content .product-features .product-features__txt p {
+  color: #898989;
+  font-size: 16px;
+}
+
+@media (max-width: 1200px) {
+  .product-feature__content {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {
+  .product-feature__content {
+    display: none;
+  }
+}
 .footer-content {
   max-width: 1240px;
   margin-block: 28px;
@@ -717,4 +757,40 @@ header .fas {
 
 .btn-confirm {
   margin-left: 0;
+}
+
+.about-content {
+  max-width: 1440px;
+  margin-block: 50px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-inline: 15px;
+}
+.about-content .about-detail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.about-content .about-detail .about-img {
+  max-width: 600px;
+  object-fit: cover;
+}
+.about-content .about-detail .about-img img {
+  width: 100%;
+}
+.about-content .about-txt {
+  max-width: 700px;
+  text-align: center;
+}
+.about-content .about-txt h4 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.about-content .about-txt p {
+  font-size: 15px;
+  color: #9F9F9F;
 }
