@@ -53,5 +53,47 @@
       </div>
     </div>
   </section>
+
+  <section class="details">
+    <div class="details-content">
+      <form action="#">
+        <div class="user-details">
+          <input type="text" id="first_name" placeholder="first name" required>
+          <input type="text" name="" id="second_name" placeholder="second name" required>
+        </div>
+
+        <label>Company Name (optional)</label>
+        <input type="text"  id="company_name">
+
+        <label>Country</label>
+        <select>
+          <option>Pakistan</option>
+          <option>Afganistan</option>
+          <option>India</option>
+          <option>USA</option>
+        </select>
+
+        <label>Street address</label>
+        <input type="text" id="Street" required>
+
+        <label>Town/City</label>
+        <input type="text" id="town" required>
+
+        <label>ZIP Code</label>
+        <input type="text" id="zip" required>
+
+        <label>Phone</label>
+        <input type="tel" id="Phone" required>
+
+        <label>Email</label>
+        <input type="email" id="email" required>
+
+        <button type="submit" id="confirmOrder" class="btn-confirm">Confirm Order</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="../script.js"></script>
+  <script src="../checkout.js"></script>
 </body>
 </html>

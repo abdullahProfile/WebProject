@@ -2,7 +2,7 @@ const cart = document.getElementById('cart');
 const cartIconMobile = document.getElementById('cartIcon-mobile');
 const cartIconDesktop = document.getElementById('cartIcon-desktop');
 const closeCart = document.getElementById('closeCart');
-const confirmOrder = document.getElementById('confirmOrder');
+
 const cartItems = document.getElementById('cartItems');
 const totalBill = document.getElementById('totalBill');
 
@@ -44,14 +44,3 @@ function removeItem(button, itemPrice) {
   totalBill.textContent = total.toLocaleString();
 }
 
-
-confirmOrder.addEventListener('click', () => {
-  if (total > 0) {
-    alert("Order successfully placed!");
-    cartItems.innerHTML = '';
-    total = 0;
-    totalBill.textContent = '0';
-  } else {
-    alert("Your cart is empty. Add items to place an order.");
-  }
-});

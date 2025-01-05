@@ -439,6 +439,7 @@ header .fas {
   font-weight: bold;
   margin-top: 16px;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .btn-confirm {
@@ -451,7 +452,8 @@ header .fas {
   width: 100%;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 16px;
+  margin-top: 40px;
+  text-decoration: none;
 }
 
 .btn-confirm:hover {
@@ -575,4 +577,38 @@ header .fas {
 }
 .contact-content form button:hover {
   background-color: black;
+}
+
+.details-content {
+  max-width: 1440px;
+  margin-block: 63px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.details-content form {
+  max-width: 603px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.details-content form .user-details {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.details-content form .user-details input {
+  padding: 15px 12px;
+  border-radius: 10px;
+}
+.details-content form input {
+  padding: 15px 12px;
+  border-radius: 10px;
+}
+.details-content form select {
+  padding: 15px 12px;
+}
+.details-content form select option {
+  background-color: rgb(175, 173, 173);
+  padding: 15px 12px;
 }
