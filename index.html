@@ -8,6 +8,30 @@
   <title>Furniro</title>
 </head>
 <body>
+
+  <div class="login-container" id="loginForm">
+    <button type="button" id="closeLoginForm" class="close-btn">&times;</button>
+    <h2>Login</h2>
+    <form id="loginFormElement">
+      <label for="name">Name</label>
+      <input type="text" id="name" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" required>
+
+      <button type="button" id="login-btn">Login</button>
+    </form>
+  </div>
+
+  <div class="search-container">
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for products...">
+      <div id="searchResults"></div>
+      <!-- Close Button -->
+      <span class="close-search" id="closeSearch">×</span>
+    </div>
+  </div>
+
   <header>
     <a href="./index.html"><img src="./assets/logos/logo.svg" alt="logo"></a>
 
@@ -18,8 +42,8 @@
       <a href="./pages/contact.html" target="_parent">Contact</a>
 
       <div class="header-navbar_icons">
-        <a href="#"><img src="./assets/icons/iconOne.svg" alt="icon"></a>
-        <a href="#"><img src="./assets/icons/iconTwo.svg" alt="icon"></a>
+        <a href="#" class="login-mbl"><img src="./assets/icons/iconOne.svg" alt="icon"></a>
+        <a href="#" class="search" onclick="searchIcon()"><img src="./assets/icons/iconTwo.svg" alt="icon"></a>
         <a href="#"><img src="./assets/icons/iconThree.svg" alt="icon"></a>
         <a href="#" id="cartIcon-mobile"><img src="./assets/icons/iconFour.svg" alt="icon"></a>
       </div>
@@ -29,8 +53,8 @@
     </nav>
 
     <div class="header-icons">
-      <a href="#"><img src="./assets/icons/iconOne.svg" alt="icon"></a>
-      <a href="#"><img src="./assets/icons/iconTwo.svg" alt="icon"></a>
+      <a href="#" class="login-icon"><img src="./assets/icons/iconOne.svg" alt="icon"></a>
+      <a href="#" class="search_icon" onclick="searchIcon()"><img src="./assets/icons/iconTwo.svg" alt="icon"></a>
       <a href="#"><img src="./assets/icons/iconThree.svg" alt="icon"></a>
       <a href="#" id="cartIcon-desktop"><img src="./assets/icons/iconFour.svg" alt="icon"></a>
     </div>
@@ -262,5 +286,7 @@
   </footer>
   <script src="./script.js"></script>
   <script src="./cart.js"></script>
+  <script src="./login.js"></script>
+  <script src="./search.js"></script>
 </body>
 </html>

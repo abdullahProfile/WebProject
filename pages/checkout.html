@@ -17,24 +17,9 @@
       <a href="#">About</a>
       <a href="../pages/contact.html">Contact</a>
 
-      <div class="header-navbar_icons">
-        <a href="#"><img src="../assets/icons/iconOne.svg" alt="icon"></a>
-        <a href="#"><img src="../assets/icons/iconTwo.svg" alt="icon"></a>
-        <a href="#"><img src="../assets/icons/iconThree.svg" alt="icon"></a>
-        <a href="#"><img src="../assets/icons/iconFour.svg" alt="icon"></a>
-      </div>
-
       <button class="fas fa-times close-menu" onclick="closeMenu()"></button>
 
     </nav>
-
-    <div class="header-icons">
-      <a href="#"><img src="../assets/icons/iconOne.svg" alt="icon"></a>
-      <a href="#"><img src="../assets/icons/iconTwo.svg" alt="icon"></a>
-      <a href="#"><img src="../assets/icons/iconThree.svg" alt="icon"></a>
-      <a href="#"><img src="../assets/icons/iconFour.svg" alt="icon"></a>
-    </div>
-
     <button class="fas fa-bars open-menu" onclick="openMenu()"></button>
   </header>
 
@@ -56,21 +41,20 @@
 
   <section class="details">
     <div class="details-content">
-      <form action="#">
+      <form id="checkoutForm">
         <div class="user-details">
-          <input type="text" id="first_name" placeholder="first name" required>
-          <input type="text" name="" id="second_name" placeholder="second name" required>
+          <input type="text" id="first_name" placeholder="First name" required>
+          <input type="text" id="second_name" placeholder="Second name" required>
         </div>
-
         <label>Company Name (optional)</label>
-        <input type="text"  id="company_name">
+        <input type="text" id="company_name">
 
         <label>Country</label>
-        <select>
-          <option>Pakistan</option>
-          <option>Afganistan</option>
-          <option>India</option>
-          <option>USA</option>
+        <select id="country" required>
+          <option value="Pakistan">Pakistan</option>
+          <option value="Afghanistan">Afghanistan</option>
+          <option value="India">India</option>
+          <option value="USA">USA</option>
         </select>
 
         <label>Street address</label>
@@ -88,11 +72,36 @@
         <label>Email</label>
         <input type="email" id="email" required>
 
-        <button type="submit" id="confirmOrder" class="btn-confirm">Confirm Order</button>
+        <button type="submit" id="placeOrder" class="btn-confirm">Confirm Order</button>
       </form>
+
     </div>
   </section>
 
+  <footer>
+    <div class="footer-content">
+      <div class="footer-nav">
+        <h3>Funiro.</h3>
+        <p>400 University Drive Suite 200 Coral Gables,<br>FL 33134 USA</p>
+      </div>
+
+      <nav class="footer-nav">
+        <p>Links</p>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <nav class="footer-nav">
+        <p>Links</p>
+        <a href="#">Payment Options</a>
+        <a href="#">Returns</a>
+        <a href="#">Privacy Policies</a>
+      </nav>
+
+    </div>
+  </footer>
   <script src="../script.js"></script>
   <script src="../checkout.js"></script>
 </body>
