@@ -89,8 +89,8 @@ header .fas {
     background-color: #FFF3E3;
     align-items: center;
     display: none;
-    width: 70%;
-    height: 100%;
+    width: 37%;
+    height: 69%;
     z-index: 100;
     justify-content: center;
     top: 0;
@@ -112,86 +112,57 @@ header .fas {
     justify-content: center;
   }
 }
-.hero__container {
-  max-width: 1440px;
-  margin-inline: auto;
+.slider {
   position: relative;
+  width: 1440px;
+  max-width: 100%;
+  margin-inline: auto;
   overflow: hidden;
 }
-.hero__container img {
-  width: 100%;
-  object-fit: cover;
-}
-.hero__container .hero__content {
-  max-width: 663px;
-  position: absolute;
-  right: 58px;
-  top: 153px;
-  background: #FFF3E3;
+
+.slider-wrapper {
   display: flex;
-  flex-direction: column;
-  padding: 62px 43px;
-  gap: 20px;
-  border-radius: 10px;
-}
-.hero__container .hero__content h1 {
-  font-size: 52px;
-  color: #B88E2F;
-  font-weight: bold;
-  text-transform: capitalize;
-}
-.hero__container .hero__content .hero__subtitle {
-  font-weight: 600;
-}
-.hero__container .hero__content .hero__description {
-  font-weight: 500;
-  font-size: 18px;
-}
-.hero__container .hero__content p {
-  color: #666;
-}
-.hero__container .hero__content a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 25px 72px;
-  background: #B88E2F;
-  max-width: 222px;
-  transition: all 0.3s ease-in;
-}
-.hero__container .hero__content a:hover {
-  background: #333;
-}
-@media (max-width: 1290px) {
-  .hero__container .hero__content {
-    top: 30px;
-  }
+  transition: transform 0.5s ease-in-out;
 }
 
-@media (max-width: 1050px) {
-  .hero__container {
-    overflow: auto !important;
-  }
-  .hero__container img {
-    display: none;
-  }
-  .hero__content {
-    max-width: 100% !important;
-    width: 100%;
-    position: static !important;
-  }
-  .hero__content h1 {
-    font-size: 20px !important;
-  }
-  .hero__content p {
-    font-size: 16px !important;
-  }
-  .hero__content a {
-    padding: 25px !important;
-    text-align: center;
-  }
+.slide {
+  min-width: 100%;
+  transition: opacity 0.5s ease-in-out;
+  object-fit: cover;
 }
+
+.slide img {
+  width: 100%;
+  height: 500px;
+  display: block;
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.slider-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
 .features-container {
   max-width: 1183px;
   margin-block: 56px;
@@ -372,11 +343,11 @@ header .fas {
 }
 
 #cart.show {
-  right: 38px;
+  right: 20px;
 }
 
 #cart h3 {
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
   color: #333;
   margin: 0;
   text-align: center;
@@ -405,7 +376,7 @@ header .fas {
   list-style: none;
   padding: 0;
   margin: 0;
-  max-height: 200px;
+  max-height: 300px;
   overflow-y: auto;
 }
 
@@ -443,6 +414,16 @@ header .fas {
   margin-bottom: 40px;
 }
 
+#cart button:focus {
+  outline: 2px solid #ccc;
+}
+
+@media (max-width: 768px) {
+  #cart {
+    width: 90%;
+    max-width: 320px;
+  }
+}
 .btn-confirm {
   background-color: #B88E2F;
   border: none;
@@ -450,7 +431,7 @@ header .fas {
   color: #fff;
   font-size: 1rem;
   padding: 10px 16px;
-  width: 100%;
+  margin-left: 30%;
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-top: 40px;
@@ -461,15 +442,6 @@ header .fas {
   background-color: #1a1c1a;
 }
 
-#cart button:focus {
-  outline: none;
-}
-
-@media (max-width: 768px) {
-  #cart {
-    width: 90%;
-  }
-}
 .login-container {
   display: none;
   position: fixed;
@@ -717,15 +689,19 @@ header .fas {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding-inline: 15px;
 }
 .details-content form .user-details {
   display: flex;
   gap: 10px;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .details-content form .user-details input {
   padding: 15px 12px;
   border-radius: 10px;
+  width: 100%;
 }
 .details-content form input {
   padding: 15px 12px;
@@ -737,4 +713,8 @@ header .fas {
 .details-content form select option {
   background-color: rgb(175, 173, 173);
   padding: 15px 12px;
+}
+
+.btn-confirm {
+  margin-left: 0;
 }

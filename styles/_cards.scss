@@ -128,11 +128,11 @@
 }
 
 #cart.show {
-  right: 38px;
+ right: 20px;
 }
 
 #cart h3 {
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
   color: #333;
   margin: 0;
   text-align: center;
@@ -161,7 +161,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  max-height: 200px;
+  max-height: 300px;
   overflow-y: auto;
 }
 
@@ -199,6 +199,18 @@
   margin-bottom: 40px;
 }
 
+#cart button:focus {
+  outline: 2px solid #ccc;
+}
+
+@media (max-width: 768px) {
+  #cart {
+    width: 90%;
+    max-width: 320px;
+  }
+}
+
+
 .btn-confirm {
   background-color: #B88E2F;
   border: none;
@@ -206,7 +218,7 @@
   color: #fff;
   font-size: 1rem;
   padding: 10px 16px;
-  width: 100%;
+  margin-left: 30%;
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-top: 40px;
@@ -216,16 +228,6 @@
 
 .btn-confirm:hover {
   background-color: #1a1c1a;
-}
-
-#cart button:focus {
-  outline: none;
-}
-
-@media (max-width: 768px) {
-  #cart {
-    width: 90%;
-  }
 }
 
 .login-container {

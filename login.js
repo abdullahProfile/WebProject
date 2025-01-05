@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const loginForm = document.getElementById('loginForm');
   const loginIcons = document.querySelectorAll('.login-icon');
-  const loginmb=document.querySelectorAll('.login-mbl');
+  const loginMblIcons = document.querySelectorAll('.login-mbl');
   const loginButton = document.getElementById('login-btn');
   const placeOrderButton = document.querySelector('#placeOrder');
   const closeButton = document.getElementById('closeLoginForm');
@@ -17,6 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+
+  loginMblIcons.forEach((icon) => {
+    icon.addEventListener('click', (e) => {
+      e.preventDefault();
+      loginForm.style.display = 'block';
+    });
+  });
+
+
   closeButton.addEventListener('click', () => {
     loginForm.style.display = 'none';
   });
@@ -26,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const password = document.getElementById('password').value.trim();
 
     if (name && password) {
-
       const userData = { name, isLoggedIn: true };
       localStorage.setItem('loggedInUser', JSON.stringify(userData));
       alert('Login successful!');
@@ -35,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
       alert('Please fill in all fields.');
     }
   });
-
 
   if (placeOrderButton) {
     placeOrderButton.addEventListener('click', (e) => {

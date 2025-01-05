@@ -10,6 +10,7 @@
 <body>
 
   <div class="login-container" id="loginForm">
+    <button type="button" id="closeLoginForm" class="close-btn">&times;</button>
     <h2>Login</h2>
     <form id="loginFormElement">
       <label for="name">Name</label>
@@ -21,17 +22,18 @@
       <button type="button" id="login-btn">Login</button>
     </form>
   </div>
+
   <header>
     <a href="../index.html"><img src="../assets/logos/logo.svg" alt="logo"></a>
 
     <nav class="header-navbar">
-      <a href="../index.html" target="_parent">Home</a>
-      <a href="#">Shop</a>
+      <a href="#">Home</a>
+      <a href="../pages/shop.html" target="_parent">Shop</a>
       <a href="#">About</a>
       <a href="../pages/contact.html" target="_parent">Contact</a>
 
       <div class="header-navbar_icons">
-        <a href="#"><img src="../assets/icons/iconTwo.svg" alt="icon"></a>
+        <a href="#" class="login-mbl"><img src="../assets/icons/iconOne.svg" alt="icon"></a>
         <a href="#" id="cartIcon-mobile"><img src="../assets/icons/iconFour.svg" alt="icon"></a>
       </div>
 
@@ -40,7 +42,7 @@
     </nav>
 
     <div class="header-icons">
-      <a href="#"><img src="../assets/icons/iconTwo.svg" alt="icon"></a>
+      <a href="#" class="login-icon"><img src="../assets/icons/iconOne.svg" alt="icon"></a>
       <a href="#" id="cartIcon-desktop"><img src="../assets/icons/iconFour.svg" alt="icon"></a>
     </div>
 
@@ -339,7 +341,7 @@
           <h3>Cart Summary</h3>
           <ul id="cartItems"></ul>
           <p>Total: Rp <span id="totalBill">0</span></p>
-          <button id="confirmOrder" class="btn-confirm">Confirm Order</button>
+          <a href="../pages/checkout.html" class="btn-confirm">Checkout</a>
         </div>
       </div>
     </div>
@@ -371,5 +373,6 @@
   </footer>
   <script src="../script.js"></script>
   <script src="../cart.js"></script>
+  <script src="../login.js"></script>
 </body>
 </html>
