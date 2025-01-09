@@ -327,6 +327,10 @@ header .fas {
   cursor: pointer;
   display: none;
 }
+.card_btn:active {
+  background-color: #B88E2F;
+  color: #1a1c1a;
+}
 
 .card:hover .card_btn {
   display: block;

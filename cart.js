@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let total = 0;
 
-  // Open and close the cart
   const toggleCartVisibility = (action) => {
     if (action === 'open') {
       cart.classList.add('show');
@@ -32,12 +31,16 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleCartVisibility('close');
   });
 
-  // Add item to the cart
   window.addToCart = (itemName, itemPrice) => {
     const listItem = document.createElement('li');
     listItem.innerHTML = `
-      ${itemName} - Rp ${itemPrice.toLocaleString()}
-      <button onclick="removeItem(this, ${itemPrice})">&times;</button>
+      <span class="item-name">${itemName}</span> - Rp <span class="item-price">${itemPrice.toLocaleString()}</span>
+      <div class="quantity-control">
+        <button class="decrease" onclick="changeQuantity(this, -1, ${itemPrice})">-</button>
+        <span class="quantity">1</span>
+        <button class="increase" onclick="changeQuantity(this, 1, ${itemPrice})">+</button>
+      </div>
+      <button class="remove" onclick="removeItem(this, ${itemPrice})">&times;</button>
     `;
     cartItems.appendChild(listItem);
 
@@ -45,10 +48,25 @@ document.addEventListener('DOMContentLoaded', () => {
     totalBill.textContent = total.toLocaleString();
   };
 
-  // Remove item from the cart
+  window.changeQuantity = (button, change, itemPrice) => {
+    const quantityElement = button.parentElement.querySelector('.quantity');
+    let quantity = parseInt(quantityElement.textContent);
+    quantity += change;
+
+    if (quantity < 1) return;
+
+    quantityElement.textContent = quantity;
+
+    const priceDifference = change * itemPrice;
+    total += priceDifference;
+    totalBill.textContent = total.toLocaleString();
+  };
+
   window.removeItem = (button, itemPrice) => {
+    const quantity = parseInt(button.parentElement.querySelector('.quantity').textContent);
     button.parentElement.remove();
-    total -= itemPrice;
+
+    total -= itemPrice * quantity;
     totalBill.textContent = total.toLocaleString();
   };
 });
