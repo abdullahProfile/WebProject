@@ -1,0 +1,32 @@
+[
+  {
+    "firstName": "Muhammad",
+    "secondName": "abdullah",
+    "companyName": "comsats",
+    "country": "Pakistan",
+    "street": "street 1",
+    "town": "Mardan",
+    "zip": "23260",
+    "phone": "03189930088",
+    "email": "abdullahdew88@gmail.com",
+    "user": {
+      "name": "Aizaz",
+      "isLoggedIn": true
+    }
+  },
+  {
+    "firstName": "Muhammad",
+    "secondName": "khan",
+    "companyName": "Abdullah",
+    "country": "Pakistan",
+    "street": "District mardan tehsil katlnag village kohi barmol",
+    "town": "Mardan",
+    "zip": "23260",
+    "phone": "03189930088",
+    "email": "abdullahdew88@gmail.com",
+    "user": {
+      "name": "Aizaz",
+      "isLoggedIn": true
+    }
+  }
+]
